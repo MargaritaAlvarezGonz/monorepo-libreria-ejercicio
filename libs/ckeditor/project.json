@@ -1,0 +1,33 @@
+{
+  "name": "ckeditor",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ckeditor/src",
+  "prefix": "angular-monorepo",
+  "tags": ["scope:branding", "type_branding-ckeditor"],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/ckeditor/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/ckeditor/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/ckeditor/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ckeditor/**/*.ts", "libs/ckeditor/**/*.html"]
+      }
+    }
+  }
+}
