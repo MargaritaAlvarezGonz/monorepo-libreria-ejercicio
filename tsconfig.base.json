@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@angular-monorepo/ckeditor": ["libs/ckeditor/src/index.ts"]
+      "@angular-monorepo/ckeditor": ["libs/ckeditor/src/index.ts"],
+      "@angular-monorepo/editor": ["libs/editor/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
