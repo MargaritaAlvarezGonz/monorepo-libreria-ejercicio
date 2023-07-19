@@ -40,5 +40,9 @@
     "terser-webpack-plugin": "^3.0.2",
     "webpack": "^4.43.0"
   },
+  "scripts": {
+    "build:dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
   "sideEffects": false
 }
